@@ -62,12 +62,10 @@ class DeviceInfo extends React.Component<Props, State> {
     } = this.props;
     return (
       <Screen navigationBar={<NavigationBar title="Settings" />}>
-        <Text>device info</Text>
         {device && (
           <ScrollView>
             <List>
               <OutputItem name={"Device"} value={device.dev} />
-              {/* <OutputItem name={"User"} value={device.usr} /> */}
               {isUserDevice ? (
                 <OutputItem
                   name={"Description"}
@@ -81,13 +79,7 @@ class DeviceInfo extends React.Component<Props, State> {
                     placeholder={device.dev}
                     onChangeText={text => changeName(device.id, text)}
                   />,
-                  // <TextInputItem
-                  //   name={"Server"}
-                  //   value={this.state.server}
-                  //   placeholder={THINGER_SERVER}
-                  //   onChangeText={this.handleOnChangeText}
-                  // />,
-                  // <EnterItem name={"Token QR"} onPress={() => onShowQR()} />,
+
                   <OutputItem
                     name={"Token creation date"}
                     value={timestampToString(device.iat)}

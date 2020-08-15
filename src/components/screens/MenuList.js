@@ -19,10 +19,12 @@ import {
     super(props);
     this.state = {
       calls: [
-        {id:1, action:"support",  name: "Call Support",   date:"12 jan", time:'11:14 am', video:false, image:"https://cdn.pixabay.com/photo/2016/11/17/16/06/icons-1831926_960_720.png"},
-        {id:2, action:"email",  name: "Email",  date:"12 jul", time:'15:58 am', video:false, image:"https://cdn.pixabay.com/photo/2018/02/15/01/08/icon-3154242_960_720.png"} ,
-        {id:2, action:"web",  name: "Email",  date:"12 jul", time:'15:58 am', video:false, image:"https://cdn.pixabay.com/photo/2017/03/24/07/28/instagram-2170420_960_720.png"} ,
-       
+        {id:1, action:"support",  name: "Call Support",   image:require('./../../assets/c.png')},
+        {id:2, action:"email",  name: "Email",  image:require('./../../assets/g.jpg')} ,
+        {id:2, action:"web",title:'Facebook', value:'https:www.facebook.com/togleautomation',  name: "Email",   image:require('./../../assets/f.jpg')} ,
+ 
+        {id:2, action:"web",title:'Instagram', value:'https:instagram.com/togleautomation', name: "Email",   image:require('./../../assets/i.jpg')} ,
+ 
       ]
     };
   }
@@ -52,7 +54,7 @@ import {
     return (
       // <TouchableOpacity>
         <View style={styles.row}>
-          <Image source={{ uri: item.image }} style={styles.pic} />
+          <Image source={ item.image } style={styles.pic} />
           <View>
             <View style={{flexDirection:'column'}}>
               {/* <Image style={[styles.icon, {marginLeft:15, marginRight:5, width:14, height:14}]} source={{uri:"https://img.icons8.com/small/14/000000/double-tick.png"}}/> */
@@ -87,7 +89,7 @@ import {
     if(item.action=="email"){
         return (
             <View style={styles.row}>
-              <Image source={{ uri: item.image }} style={styles.pic} />
+              <Image source={ item.image } style={styles.pic_g} />
               <View>
            
                 <View style={styles.end,{flexDirection:'column'}}>
@@ -108,22 +110,22 @@ import {
     if(item.action=="web"){
         return (
              <View style={styles.row}>
-              <Image source={{ uri: item.image }} style={styles.pic} />
+              <Image source={ item.image } style={styles.pic} />
               <View>
                
                 <View style={styles.end,{flexDirection:'column'}}>
            
-                <TouchableOpacity onPress={() => Communications.web('https://instagram.com/togleautomation')}>
+                <TouchableOpacity onPress={() => Communications.web(item.value)}>
           <View style={styles.holder}>
-            <Text style={styles.text}>instagram</Text>
+            <Text style={styles.text}>{item.title}</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => Communications.web('https://www.facebook.com/togleautomation')}>
+        {/* <TouchableOpacity onPress={() => Communications.web()}>
           <View style={styles.holder}>
             <Text style={styles.text}>FaceBook</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
 
                 </View>
@@ -180,8 +182,15 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
 
   },
+  pic_g: {
+    // borderRadius: 25,
+    width: 60,
+    height: 50,
+    marginRight:20,
+  },
+
   pic: {
-    borderRadius: 25,
+    // borderRadius: 25,
     width: 50,
     height: 50,
     marginRight:20,

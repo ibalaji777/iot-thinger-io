@@ -30,7 +30,7 @@ import { removeAllResources } from "../../actions/resource";
 import type { Dispatch } from "../../types/Dispatch";
 import NavigationBar from "../navigation/NavigationBar";
 import type { Device } from "../../types/Device";
-import { GoogleAnalyticsTracker } from "react-native-google-analytics-bridge";
+// import { GoogleAnalyticsTracker } from "react-native-google-analytics-bridge";
 import ID from "../../constants/GoogleAnalytics";
 import H1Text from "../texts/H1";
 import H2Text from "../texts/H2";
@@ -57,10 +57,10 @@ type Props = {
 class DevicesScreen extends React.Component<Props,State> {
   constructor(props) {
     super(props);
-    new GoogleAnalyticsTracker(ID).trackScreenView("Main");
+    // new GoogleAnalyticsTracker(ID).trackScreenView("Main");
     this.state={
       group_image:'',
-      group_name:'balaji',
+      group_name:'',
       group_dialog:false
     };
     console.log("--------screnn devices constructor props--------")
@@ -182,8 +182,6 @@ GroupName=(input)=>{
 
     return (
       <View style={{ flex: 1 }}>
-              {/* //group */}
-    {/* <Text>{JSON.stringify(this.props)}</Text> */}
 
       <Groupdialog group_dialog={this.state.group_dialog}/>
          <Text style={{color:'#0080FF',fontWeight:'bold',fontSize:14,marginLeft:4,marginTop:4}}>FAVORITES</Text>

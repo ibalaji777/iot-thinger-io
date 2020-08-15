@@ -88,7 +88,6 @@ class ResourcesScreen extends React.Component<Props, State> {
       const data: MultipleResource = (resources[item].data: any);
       return (
         <View>
-        {/* <Text>multiple aware flat list</Text> */}
 
         <MultipleResourceView
           resource={item}
@@ -104,8 +103,7 @@ class ResourcesScreen extends React.Component<Props, State> {
       const data: SimpleResource = (resources[item].data: any);
       return (
         <View>
-        {/* <Text>Simple resource view </Text> */}
-        {/* <Text>{JSON.stringify(item)}</Text> */}
+
         <SimpleResourceView
           resource={item}
           data={data || {}}
@@ -125,9 +123,7 @@ class ResourcesScreen extends React.Component<Props, State> {
 
     return (
       <View>
-        {/* <Text>keyboard aware flat list</Text>
-        <Text>{JSON.stringify(resources)}</Text>
-        <Text>{JSON.stringify(device)}</Text> */}
+
       <KeyboardAwareFlatList
         keyboardOpeningTime={0}
         data={Object.keys(resources)}
@@ -173,8 +169,6 @@ class ResourcesScreen extends React.Component<Props, State> {
       >
 
         
-        {/* <Text>resource.js</Text>
-        <Text>{JSON.stringify(this.props)}</Text> */}
 
         {device &&
           (device.isFetching && !this.state.pullRefresh ? (

@@ -11,9 +11,6 @@ const initialState: NavState = getStateForAction(
   getActionForPathAndParams("Main/Devices")
 );
 
-// const initialState: NavState = getStateForAction(
-//   getActionForPathAndParams("Main/Devices")
-// );
 
 
 export default function lockedAttributes(

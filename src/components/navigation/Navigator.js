@@ -17,11 +17,11 @@ import DeviceInfo from "../screens/DeviceInfo";
 import Chart from "../screens/Chart";
 import Menu from "../screens/MenuList";
 import ShowQR from "../screens/ShowQR";
-import Icon from "react-native-vector-icons/MaterialIcons";
-import {
-  COLOR_TAB_BAR_ACTIVE,
-  COLOR_TAB_BAR_INACTIVE
-} from "../../constants/ThingerColors";
+// import Icon from "react-native-vector-icons/MaterialIcons";
+// import {
+//   COLOR_TAB_BAR_ACTIVE,
+//   COLOR_TAB_BAR_INACTIVE
+// } from "../../constants/ThingerColors";
 import UserDevices from "../screens/User";
 import UserSettings from "../screens/UserSettings";
 
@@ -47,7 +47,7 @@ export const Routes = StackNavigator(
 );
 
 type Props = {
-  isLogged: boolean,
+  // isLogged: boolean,
   dispatch: Dispatch,
   nav: any
 };
@@ -63,7 +63,7 @@ class Navigator extends React.Component<Props> {
           dispatch,
           state: nav,
           addListener,
-          isLogged: this.props.isLogged
+          isLogged:true //this.props.isLogged
         })}
       />
     );
@@ -72,7 +72,7 @@ class Navigator extends React.Component<Props> {
 
 const mapStateToProps = state => {
   return {
-    isLogged: state.login.isLogged,
+    // isLogged: state.login.isLogged,
     nav: state.nav
   };
 };

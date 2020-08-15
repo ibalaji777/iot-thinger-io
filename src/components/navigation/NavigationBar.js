@@ -34,11 +34,9 @@ class NavigationBar extends React.Component<Props> {
   render() {
     const { title,settingbutton, button, main = false, dispatch } = this.props;
 
-    // checkElementNavbar=()=>{
 
       var component1=null;
       var component2=null;
-      // {button ? (
             if(button){
                component1=(<TouchableOpacity onPress={button.onPress}><Icon name={button.icon}  size={FONT_SIZE_H1}  style={styles.icon}/></TouchableOpacity>);
             }
@@ -46,8 +44,6 @@ class NavigationBar extends React.Component<Props> {
             if(settingbutton){
               component2=(<TouchableOpacity onPress={settingbutton.onPress}> <Icon name={settingbutton.icon} size={FONT_SIZE_H1}  style={styles.icon} />  </TouchableOpacity>);
             }
-      // return component;
-    // }
     
     
     return (
@@ -107,7 +103,6 @@ const styles = StyleSheet.create({
   icon: {
     color: "white",
     padding: PADDING,
-    // paddingTop:PADDING-10,
     
     paddingRight: PADDING * 2
   },

@@ -138,15 +138,13 @@ console.debug(isGroupExist)
     elevation: 15 }}>
       <Image
         style={{ width: "100%", height: 180 }}
-        // source={{ uri: item.image }}
-        // source={item.image}
+        
         source={this.switch_group(item.group)}
       />
 
 <View   style={{ justifyContent:'center',alignItems:'center', position:"absolute",borderRadius :50,backgroundColor:item.top_icon_bg_color, top:5,left:5, width: 60, height: 60,overflow:"hidden", }}>
 <Image
         style={{  width: 30, height: 30 ,zIndex: 500 }}
-        // source={{ uri: item.image }}
         source={this.switch_group(item.group)}
       />
     
@@ -173,9 +171,7 @@ console.debug(isGroupExist)
 
     return (
       <View style={{ flex: 1 }}>
-        {/* <Text>devices2step hahaha{JSON.stringify(this.props)}</Text>
-        <Text>deha{JSON.stringify(this.state)}</Text> */}
-
+        
         {this.state.isGroupExist
           ? (
           <FlatList
@@ -238,11 +234,7 @@ console.debug(isGroupExist)
       navigationBar={
         <NavigationBar
           title={"Togle"}
-          // button={{
-          //   icon: "cog",
-          //   onPress: onSettingsPress
-          // }}
-        />
+                />
       }
     >
 
