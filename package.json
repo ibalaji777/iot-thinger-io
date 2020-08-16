@@ -23,7 +23,7 @@
     "react-native-model": "^1.0.5",
     "react-native-qrcode-svg": "^5.0.6",
     "react-native-redux-toast": "^1.0.3",
-    "react-native-svg": "6.2.2",
+    "react-native-svg": "9.3.3",
     "react-native-textinput-effects": "^0.4.2",
     "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.5.0",
